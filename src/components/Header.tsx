@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Search, ShoppingCart, User, ChevronDown } from "lucide-react";
@@ -6,6 +6,20 @@ import { Menu, Search, ShoppingCart, User, ChevronDown } from "lucide-react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setShowMegaMenu(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setShowMegaMenu(false);
+    }, 150);
+  };
 
   const navigation = [
     { name: "About Us", href: "#about" },
@@ -93,8 +107,8 @@ const Header = () => {
             {/* Shop Mega Menu */}
             <div 
               className="relative"
-              onMouseEnter={() => setShowMegaMenu(true)}
-              onMouseLeave={() => setShowMegaMenu(false)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               <button className="flex items-center text-sm font-medium text-primary transition-colors hover:text-primary/80">
                 Shop
@@ -105,7 +119,11 @@ const Header = () => {
               
               {/* Mega Menu Dropdown */}
               {showMegaMenu && (
-                <div className="fixed inset-x-0 top-16 z-50">
+                <div 
+                  className="fixed inset-x-0 top-16 z-50"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
                   <div className="w-screen bg-card/95 backdrop-blur-md border-t border-border shadow-premium">
                     <div className="container mx-auto px-6 py-8">
                       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
