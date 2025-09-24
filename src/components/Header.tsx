@@ -196,8 +196,9 @@ const Header = () => {
                 <span className="sr-only">Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80">
-              <div className="flex flex-col space-y-4 mt-8">
+            <SheetContent side="right" className="w-80 overflow-y-auto">
+              <div className="flex flex-col h-full">
+                <div className="flex-1 space-y-4 mt-8 overflow-y-auto">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
@@ -239,9 +240,9 @@ const Header = () => {
                       </div>
                     ))}
                   </div>
-                </div>
-                
-                <div className="flex items-center space-x-4 pt-4">
+                 </div>
+                 
+                 <div className="flex items-center space-x-4 pt-4">
                   <Button variant="ghost" size="sm">
                     <Search className="h-4 w-4 mr-2" />
                     Search
@@ -254,9 +255,10 @@ const Header = () => {
                     <ShoppingCart className="h-4 w-4 mr-2" />
                     Cart (0)
                   </Button>
-                </div>
-              </div>
-            </SheetContent>
+                 </div>
+                 </div>
+               </div>
+             </SheetContent>
           </Sheet>
         </div>
       </div>
