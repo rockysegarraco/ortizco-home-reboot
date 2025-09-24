@@ -105,42 +105,44 @@ const Header = () => {
               
               {/* Mega Menu Dropdown */}
               {showMegaMenu && (
-                <div className="absolute top-full right-0 w-screen max-w-5xl mt-2 z-50" style={{ left: 'auto', transform: 'translateX(-20%)' }}>
-                  <div className="bg-card/95 backdrop-blur-md border border-border rounded-lg shadow-premium p-8">
-                    <div className="grid grid-cols-4 gap-8">
-                      {Object.values(megaMenuData).map((section, index) => (
-                        <div key={index} className="space-y-4">
-                          <h3 className="font-semibold text-lg text-foreground border-b border-border pb-2">
-                            {section.title}
-                          </h3>
-                          <ul className="space-y-3">
-                            {section.categories.map((category, catIndex) => (
-                              <li key={catIndex}>
-                                <a
-                                  href={category.href}
-                                  className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 block py-1"
-                                >
-                                  {category.name}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
+                <div className="fixed inset-x-0 top-16 z-50">
+                  <div className="w-screen bg-card/95 backdrop-blur-md border-t border-border shadow-premium">
+                    <div className="container mx-auto px-6 py-8">
+                      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        {Object.values(megaMenuData).map((section, index) => (
+                          <div key={index} className="space-y-4">
+                            <h3 className="font-semibold text-lg text-foreground border-b border-border pb-2">
+                              {section.title}
+                            </h3>
+                            <ul className="space-y-3">
+                              {section.categories.map((category, catIndex) => (
+                                <li key={catIndex}>
+                                  <a
+                                    href={category.href}
+                                    className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 block py-1"
+                                  >
+                                    {category.name}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Featured Section */}
+                      <div className="mt-8 pt-6 border-t border-border">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                          <div>
+                            <h4 className="font-semibold text-foreground mb-2">Need Help Choosing?</h4>
+                            <p className="text-sm text-muted-foreground">
+                              Our exhibition experts can help you select the perfect items for your booth.
+                            </p>
+                          </div>
+                          <Button className="bg-gold-gradient hover:opacity-90 transition-opacity">
+                            Get Expert Help
+                          </Button>
                         </div>
-                      ))}
-                    </div>
-                    
-                    {/* Featured Section */}
-                    <div className="mt-8 pt-6 border-t border-border">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h4 className="font-semibold text-foreground mb-2">Need Help Choosing?</h4>
-                          <p className="text-sm text-muted-foreground">
-                            Our exhibition experts can help you select the perfect items for your booth.
-                          </p>
-                        </div>
-                        <Button className="bg-gold-gradient hover:opacity-90 transition-opacity">
-                          Get Expert Help
-                        </Button>
                       </div>
                     </div>
                   </div>
