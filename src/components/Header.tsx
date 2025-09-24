@@ -105,8 +105,8 @@ const Header = () => {
               
               {/* Mega Menu Dropdown */}
               {showMegaMenu && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-6xl mt-2 z-50">
-                  <div className="bg-card border border-border rounded-lg shadow-premium p-8">
+                <div className="absolute top-full right-0 w-screen max-w-5xl mt-2 z-50" style={{ left: 'auto', transform: 'translateX(-20%)' }}>
+                  <div className="bg-card/95 backdrop-blur-md border border-border rounded-lg shadow-premium p-8">
                     <div className="grid grid-cols-4 gap-8">
                       {Object.values(megaMenuData).map((section, index) => (
                         <div key={index} className="space-y-4">
