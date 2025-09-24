@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Star, ShoppingCart, Eye } from "lucide-react";
+import { Eye } from "lucide-react";
 
 const FeaturedProducts = () => {
   const products = [
@@ -88,57 +87,32 @@ const FeaturedProducts = () => {
               className="group cursor-pointer border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-premium bg-card/50 backdrop-blur-sm"
             >
               <CardContent className="p-6">
-                <div className="relative mb-4 overflow-hidden rounded-lg">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  {product.featured && (
-                    <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground">
-                      Featured
-                    </Badge>
-                  )}
-                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button size="sm" variant="secondary" className="h-8 w-8 p-0 rounded-full">
-                      <Eye className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
+                 <div className="relative mb-4 overflow-hidden rounded-lg">
+                   <img
+                     src={product.image}
+                     alt={product.name}
+                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                   />
+                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                     <Button size="sm" variant="secondary" className="h-8 w-8 p-0 rounded-full">
+                       <Eye className="h-4 w-4" />
+                     </Button>
+                   </div>
+                 </div>
 
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <Badge variant="secondary" className="text-xs">
-                      {product.category}
-                    </Badge>
-                    <div className="flex items-center space-x-1">
-                      <Star className="h-4 w-4 fill-primary text-primary" />
-                      <span className="text-sm font-medium">{product.rating}</span>
-                      <span className="text-sm text-muted-foreground">({product.reviews})</span>
-                    </div>
-                  </div>
+                 <div className="space-y-3">
+                   <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
+                     {product.name}
+                   </h3>
 
-                  <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
-                    {product.name}
-                  </h3>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-2xl font-bold text-primary">{product.price}</span>
-                      {product.originalPrice && (
-                        <span className="text-sm text-muted-foreground line-through">
-                          {product.originalPrice}
-                        </span>
-                      )}
-                    </div>
-                    <Button 
-                      size="sm" 
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                    >
-                      <ShoppingCart className="h-4 w-4 mr-1" />
-                      Add
-                    </Button>
-                  </div>
+                   <div className="flex items-center space-x-2">
+                     <span className="text-2xl font-bold text-primary">{product.price}</span>
+                     {product.originalPrice && (
+                       <span className="text-sm text-muted-foreground line-through">
+                         {product.originalPrice}
+                       </span>
+                     )}
+                   </div>
                 </div>
               </CardContent>
             </Card>
