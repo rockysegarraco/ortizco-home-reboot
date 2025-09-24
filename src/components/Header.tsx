@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Search, ShoppingCart, User } from "lucide-react";
+import { Menu, Search, ShoppingCart, User, ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
 
   const navigation = [
     { name: "About Us", href: "#about" },
@@ -12,8 +13,57 @@ const Header = () => {
     { name: "Shows & Events", href: "#events" },
     { name: "News", href: "#news" },
     { name: "Contact", href: "#contact" },
-    { name: "Shop", href: "#shop", highlight: true },
   ];
+
+  const megaMenuData = {
+    furniture: {
+      title: "Furniture & Displays",
+      categories: [
+        { name: "Tables", href: "#tables" },
+        { name: "Chairs", href: "#chairs" },
+        { name: "Flooring", href: "#flooring" },
+        { name: "Drapes", href: "#drapes" },
+        { name: "Exhibit Booth Rental", href: "#booth-rental" },
+        { name: "Specialty Furniture", href: "#specialty-furniture" },
+        { name: "Display Cases", href: "#display-cases" },
+        { name: "Fixtures", href: "#fixtures" },
+        { name: "Supplies", href: "#supplies" }
+      ]
+    },
+    customFurniture: {
+      title: "Custom Furniture",
+      categories: [
+        { name: "Accent and Cafe Tables", href: "#accent-tables" },
+        { name: "Accessories And Office Furnishings", href: "#office-furnishings" },
+        { name: "Bar Table", href: "#bar-table" },
+        { name: "Barstool Chair", href: "#barstool" },
+        { name: "Lounge Chairs", href: "#lounge-chairs" },
+        { name: "Loveseat", href: "#loveseat" },
+        { name: "Office Chair", href: "#office-chair" },
+        { name: "Ottoman and Cubes", href: "#ottoman" },
+        { name: "Sofa", href: "#sofa" }
+      ]
+    },
+    laborServices: {
+      title: "Labor Services",
+      categories: [
+        { name: "Labor (Installation, Dismantle, and Spotting)", href: "#labor-installation" },
+        { name: "Forklift Labor", href: "#forklift-labor" },
+        { name: "Unload Cart Service", href: "#unload-cart" },
+        { name: "Shrink Wrap Labor Service", href: "#shrink-wrap" },
+        { name: "Hanging Sign Services (Installation and Dismantle)", href: "#hanging-signs" },
+        { name: "Porter Services (Trash Disposal)", href: "#porter-services" },
+        { name: "Vacuum", href: "#vacuum" }
+      ]
+    },
+    audioVisual: {
+      title: "Audio Visual",
+      categories: [
+        { name: "Flatscreen Monitor", href: "#flatscreen-monitor" },
+        { name: "Speaker System", href: "#speaker-system" }
+      ]
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -34,15 +84,69 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  item.highlight
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.name}
               </a>
             ))}
+            
+            {/* Shop Mega Menu */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setShowMegaMenu(true)}
+              onMouseLeave={() => setShowMegaMenu(false)}
+            >
+              <button className="flex items-center text-sm font-medium text-primary transition-colors hover:text-primary/80">
+                Shop
+                <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" 
+                  style={{ transform: showMegaMenu ? 'rotate(180deg)' : 'rotate(0deg)' }} 
+                />
+              </button>
+              
+              {/* Mega Menu Dropdown */}
+              {showMegaMenu && (
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-6xl mt-2 z-50">
+                  <div className="bg-card border border-border rounded-lg shadow-premium p-8">
+                    <div className="grid grid-cols-4 gap-8">
+                      {Object.values(megaMenuData).map((section, index) => (
+                        <div key={index} className="space-y-4">
+                          <h3 className="font-semibold text-lg text-foreground border-b border-border pb-2">
+                            {section.title}
+                          </h3>
+                          <ul className="space-y-3">
+                            {section.categories.map((category, catIndex) => (
+                              <li key={catIndex}>
+                                <a
+                                  href={category.href}
+                                  className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 block py-1"
+                                >
+                                  {category.name}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Featured Section */}
+                    <div className="mt-8 pt-6 border-t border-border">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h4 className="font-semibold text-foreground mb-2">Need Help Choosing?</h4>
+                          <p className="text-sm text-muted-foreground">
+                            Our exhibition experts can help you select the perfect items for your booth.
+                          </p>
+                        </div>
+                        <Button className="bg-gold-gradient hover:opacity-90 transition-opacity">
+                          Get Expert Help
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Desktop Actions */}
@@ -79,15 +183,44 @@ const Header = () => {
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`text-lg font-medium transition-colors hover:text-primary ${
-                      item.highlight
-                        ? "text-primary"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
+                    className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {item.name}
                   </a>
                 ))}
+                
+                {/* Mobile Shop Categories */}
+                <div className="border-t border-border pt-4 mt-6">
+                  <h3 className="text-lg font-semibold text-primary mb-4">Shop Categories</h3>
+                  <div className="space-y-4">
+                    {Object.values(megaMenuData).map((section, index) => (
+                      <div key={index}>
+                        <h4 className="font-medium text-foreground mb-2">{section.title}</h4>
+                        <ul className="space-y-2 ml-4">
+                          {section.categories.slice(0, 3).map((category, catIndex) => (
+                            <li key={catIndex}>
+                              <a
+                                href={category.href}
+                                onClick={() => setIsOpen(false)}
+                                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                              >
+                                {category.name}
+                              </a>
+                            </li>
+                          ))}
+                          {section.categories.length > 3 && (
+                            <li>
+                              <span className="text-xs text-muted-foreground">
+                                +{section.categories.length - 3} more
+                              </span>
+                            </li>
+                          )}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
                 <div className="flex items-center space-x-4 pt-4">
                   <Button variant="ghost" size="sm">
                     <Search className="h-4 w-4 mr-2" />
