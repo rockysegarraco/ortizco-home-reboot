@@ -118,16 +118,6 @@ const FeaturedProducts = () => {
             </Card>
           ))}
         </div>
-
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg font-semibold rounded-lg"
-          >
-            View All Products
-          </Button>
-        </div>
       </div>
     </section>
   );
