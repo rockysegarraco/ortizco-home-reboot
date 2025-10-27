@@ -1,24 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-exhibition.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Professional exhibition setup with modern furniture and lighting"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Professional exhibition setup with modern furniture and lighting" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-hero-gradient" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-12 py-16">
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl text-white mb-6 leading-tight font-semibold md:text-8xl">
             Creating Experiences,{" "}
             <span className="block">Not Just Exhibits</span>
           </h1>
@@ -34,8 +28,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
