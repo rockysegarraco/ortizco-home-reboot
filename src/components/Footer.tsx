@@ -59,7 +59,7 @@ const Footer = () => {
                 SHOP
               </span>
             </div>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-white mb-6 leading-relaxed">
               Creating exceptional exhibition experiences through innovative design, 
               premium products, and comprehensive services. Your success is our mission.
             </p>

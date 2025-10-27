@@ -95,7 +95,7 @@ const FeaturedProducts = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Frequently Requested Items & Services
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Browse for popular items and services to feature in your booth. 
             Each piece is carefully selected for professional exhibitions and events.
           </p>

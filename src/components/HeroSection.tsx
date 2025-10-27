@@ -17,7 +17,7 @@ const HeroSection = () => {
             <span className="block">Not Just Exhibits</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-2xl">
+          <p className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-2xl">
             We integrate cutting edge technology and innovative solutions to ensure your expo 
             or production runs seamlessly and leaves a lasting impact.
           </p>

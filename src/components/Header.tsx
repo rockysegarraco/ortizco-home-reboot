@@ -181,7 +181,7 @@ const Header = () => {
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                           <div>
                             <h4 className="font-semibold text-foreground mb-2">Need Help Choosing?</h4>
-                            <p className="text-sm text-muted-foreground">
+                            <p className="text-sm text-white">
                               Our exhibition experts can help you select the perfect items for your booth.
                             </p>
                           </div>

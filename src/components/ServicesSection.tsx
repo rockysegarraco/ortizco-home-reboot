@@ -57,7 +57,7 @@ const ServicesSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Complete Exhibition Solutions
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             From initial concept to final execution, we provide comprehensive services 
             to make your exhibition a memorable experience that drives results.
           </p>
@@ -80,7 +80,7 @@ const ServicesSection = () => {
                   {service.title}
                 </h3>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-white mb-6 leading-relaxed">
                   {service.description}
                 </p>
 

@@ -27,8 +27,8 @@ const DataEnrichmentSection = () => {
             <h2 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">Booth Rentals</h2>
 
             {/* Description */}
-            <p className="text-lg text-muted-foreground leading-relaxed">Ready to elevate your presence on the show floor? Whether you need a compact 10’ x 8’ booth or a more commanding 20’ x 20’+ layout, Ortiz&amp;Co. delivers premium, fully-curated structures designed for comfort, functionality, and brand impact. Our turnkey packages include professional furnishings and technology to ensure you’re event-ready from day one. Connect with our Events Team today at events@ortizandco.com
- to receive a tailored quote and secure the perfect booth setup for your next show. Let’s build your best event experience yet!</p>
+            <p className="text-lg text-white leading-relaxed">Ready to elevate your presence on the show floor? Whether you need a compact 10' x 8' booth or a more commanding 20' x 20'+ layout, Ortiz&amp;Co. delivers premium, fully-curated structures designed for comfort, functionality, and brand impact. Our turnkey packages include professional furnishings and technology to ensure you're event-ready from day one. Connect with our Events Team today at events@ortizandco.com
+ to receive a tailored quote and secure the perfect booth setup for your next show. Let's build your best event experience yet!</p>
 
             {/* Action Buttons */}
             <div className="flex items-center gap-4 pt-4">
