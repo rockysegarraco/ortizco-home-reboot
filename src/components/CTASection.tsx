@@ -2,14 +2,14 @@ import { Button } from "@/components/ui/button";
 
 const CTASection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm tracking-[0.3em] text-white mb-6 uppercase">
+          <p className="text-sm tracking-[0.3em] text-black mb-6 uppercase">
             Passion for Planning
           </p>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-8 leading-tight">
             Seamless Expos & Productions with Cutting-Edge Solutions
           </h2>
 
