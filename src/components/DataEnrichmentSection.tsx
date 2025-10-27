@@ -27,15 +27,8 @@ const DataEnrichmentSection = () => {
             <h2 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">E</h2>
 
             {/* Description */}
-            <p className="text-lg text-muted-foreground leading-relaxed">Our inline booth options include 10’ x 8’ and 20’ x 8’ structures.
-
-The 10’ x 8’ option has a branded counter with stools, a tall back wall panel, and a 40” monitor, ensuring comfort and convenience during the event.
-
-The 20’ x 8’ option includes a branded counter with stools, a tall back wall panel, a 50” monitor, and a table with executive chairs.
-
-Ortiz&amp;Co&amp;Co. offers 20’ x 20’ and larger booth structures for more significant events. Please contact the Ortiz&amp;Co Events Team at events@ortizandco.com for a quote tailored to your requirements.
-
-Keep in mind that our custom booths are carefully curated packages that include furniture pieces. Any modifications to these packages may incur a restocking fee at the warehouse. We strive to provide the best service and transparency in our offerings.</p>
+            <p className="text-lg text-muted-foreground leading-relaxed">Ready to elevate your presence on the show floor? Whether you need a compact 10’ x 8’ booth or a more commanding 20’ x 20’+ layout, Ortiz&amp;Co. delivers premium, fully-curated structures designed for comfort, functionality, and brand impact. Our turnkey packages include professional furnishings and technology to ensure you’re event-ready from day one. Connect with our Events Team today at events@ortizandco.com
+ to receive a tailored quote and secure the perfect booth setup for your next show. Let’s build your best event experience yet!</p>
 
             {/* Action Buttons */}
             <div className="flex items-center gap-4 pt-4">
