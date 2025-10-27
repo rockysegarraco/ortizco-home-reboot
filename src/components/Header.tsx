@@ -94,16 +94,6 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {item.name}
-              </a>
-            ))}
-            
             {/* Shop Mega Menu */}
             <div 
               className="relative"
@@ -167,6 +157,16 @@ const Header = () => {
                 </div>
               )}
             </div>
+            
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
           </nav>
 
           {/* Desktop Actions */}
