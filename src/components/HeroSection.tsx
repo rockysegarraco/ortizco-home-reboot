@@ -12,7 +12,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-12 py-16">
         <div className="max-w-full">
-          <h1 className="text-4xl text-white mb-6 leading-tight font-semibold md:text-6xl">
+          <h1 className="text-4xl text-white mb-6 leading-tight font-semibold md:text-8xl">
             Creating Experiences,{" "}
             <span className="block">Not Just Exhibits</span>
           </h1>
