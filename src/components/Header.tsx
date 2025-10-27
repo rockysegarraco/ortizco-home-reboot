@@ -146,7 +146,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {/* Shop Mega Menu */}
             <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               <button className="flex items-center text-sm font-medium text-primary transition-colors hover:text-primary/80">
@@ -200,7 +200,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
               <Search className="h-4 w-4" />
               <span className="sr-only">Search</span>
@@ -220,7 +220,7 @@ const Header = () => {
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Menu</span>
