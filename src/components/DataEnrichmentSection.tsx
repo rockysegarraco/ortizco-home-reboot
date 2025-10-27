@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import workspaceImage from "@/assets/data-enrichment-workspace.jpg";
+import boothRentalsImage from "@/assets/booth-rentals.png";
 const DataEnrichmentSection = () => {
   return <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -39,7 +39,7 @@ const DataEnrichmentSection = () => {
 
           {/* Right Image */}
           <div className="relative h-[600px] lg:h-[700px]">
-            <img src={workspaceImage} alt="Modern workspace with laptop and ergonomic chair" className="absolute inset-0 w-full h-full object-cover rounded-2xl" />
+            <img src={boothRentalsImage} alt="Modern workspace with laptop and ergonomic chair" className="absolute inset-0 w-full h-full object-cover rounded-2xl" />
           </div>
         </div>
       </div>
