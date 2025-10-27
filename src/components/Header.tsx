@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Search, ShoppingCart, User, ChevronDown } from "lucide-react";
+import oacLogo from "@/assets/oac-logo-horizontal-white.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -85,7 +86,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-foreground">Ortiz&Co.</span>
+              <img src={oacLogo} alt="Ortiz&Co." className="h-8" />
               <span className="rounded bg-primary px-2 py-1 text-xs font-bold text-primary-foreground">
                 SHOP
               </span>
