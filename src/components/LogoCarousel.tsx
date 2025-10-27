@@ -1,13 +1,15 @@
+import clientLogo from "@/assets/client-logo.png";
+
 const LogoCarousel = () => {
   const logos = [
-    { name: "Company 1", width: "120px" },
-    { name: "Company 2", width: "140px" },
-    { name: "Company 3", width: "110px" },
-    { name: "Company 4", width: "130px" },
-    { name: "Company 5", width: "125px" },
-    { name: "Company 6", width: "115px" },
-    { name: "Company 7", width: "135px" },
-    { name: "Company 8", width: "120px" },
+    { name: "Client 1", width: "120px" },
+    { name: "Client 2", width: "140px" },
+    { name: "Client 3", width: "110px" },
+    { name: "Client 4", width: "130px" },
+    { name: "Client 5", width: "125px" },
+    { name: "Client 6", width: "115px" },
+    { name: "Client 7", width: "135px" },
+    { name: "Client 8", width: "120px" },
   ];
 
   return (
@@ -21,9 +23,11 @@ const LogoCarousel = () => {
               className="flex items-center justify-center mx-8 flex-shrink-0"
               style={{ width: logo.width }}
             >
-              <div className="w-full h-16 bg-muted rounded-lg flex items-center justify-center text-muted-foreground font-semibold">
-                {logo.name}
-              </div>
+              <img 
+                src={clientLogo} 
+                alt={logo.name}
+                className="w-full h-auto object-contain"
+              />
             </div>
           ))}
           {/* Duplicate set for seamless loop */}
@@ -33,9 +37,11 @@ const LogoCarousel = () => {
               className="flex items-center justify-center mx-8 flex-shrink-0"
               style={{ width: logo.width }}
             >
-              <div className="w-full h-16 bg-muted rounded-lg flex items-center justify-center text-muted-foreground font-semibold">
-                {logo.name}
-              </div>
+              <img 
+                src={clientLogo} 
+                alt={logo.name}
+                className="w-full h-auto object-contain"
+              />
             </div>
           ))}
         </div>
