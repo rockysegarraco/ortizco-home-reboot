@@ -2,14 +2,14 @@ import clientLogo from "@/assets/client-logo.png";
 
 const LogoCarousel = () => {
   const logos = [
-    { name: "Client 1", width: "120px" },
-    { name: "Client 2", width: "140px" },
-    { name: "Client 3", width: "110px" },
-    { name: "Client 4", width: "130px" },
-    { name: "Client 5", width: "125px" },
-    { name: "Client 6", width: "115px" },
-    { name: "Client 7", width: "135px" },
-    { name: "Client 8", width: "120px" },
+    { name: "Client 1", width: "150px" },
+    { name: "Client 2", width: "175px" },
+    { name: "Client 3", width: "138px" },
+    { name: "Client 4", width: "163px" },
+    { name: "Client 5", width: "156px" },
+    { name: "Client 6", width: "144px" },
+    { name: "Client 7", width: "169px" },
+    { name: "Client 8", width: "150px" },
   ];
 
   return (
