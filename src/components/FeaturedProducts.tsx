@@ -1,30 +1,36 @@
 import { Card, CardContent } from "@/components/ui/card";
+import carpetSamples from "@/assets/carpet-samples.png";
+import chair from "@/assets/chair.png";
+import monitor from "@/assets/monitor.png";
+import tableDrape from "@/assets/table-drape.png";
+import carpetPadding from "@/assets/carpet-padding.png";
+
 const FeaturedProducts = () => {
   const products = [{
     id: 1,
     name: "Booth Carpet",
     price: "$280",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop"
+    image: carpetSamples
   }, {
     id: 2,
     name: "Gray Padded Side Chair",
     price: "$105",
-    image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&h=400&fit=crop"
+    image: chair
   }, {
     id: 3,
     name: "Flatscreen Monitor",
     price: "$300",
-    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=400&fit=crop"
+    image: monitor
   }, {
     id: 4,
-    name: "Booth Table",
+    name: "Table Drape",
     price: "$165.00",
-    image: "https://images.unsplash.com/photo-1549497538-303791108f95?w=400&h=400&fit=crop"
+    image: tableDrape
   }, {
     id: 5,
     name: "Carpet Padding",
     price: "$175",
-    image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&h=400&fit=crop"
+    image: carpetPadding
   }];
   return <section className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
