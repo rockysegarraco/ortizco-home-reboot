@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Menu, Search, ShoppingCart, User, ChevronDown } from "lucide-react";
 import oacLogo from "@/assets/oac-logo-horizontal-white.svg";
 const Header = () => {
@@ -259,33 +260,30 @@ const Header = () => {
                     <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
                       Shop by Category
                     </h3>
-                    <div className="space-y-6">
+                    <Accordion type="multiple" className="space-y-2">
                       {Object.values(megaMenuData).map((section, index) => (
-                        <div key={index}>
-                          <h4 className="font-semibold text-foreground mb-3">{section.title}</h4>
-                          <ul className="space-y-2">
-                            {section.categories.slice(0, 4).map((category, catIndex) => (
-                              <li key={catIndex}>
-                                <a 
-                                  href={category.href} 
-                                  onClick={() => setIsOpen(false)} 
-                                  className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
-                                >
-                                  {category.name}
-                                </a>
-                              </li>
-                            ))}
-                            {section.categories.length > 4 && (
-                              <li>
-                                <button className="text-xs text-primary hover:underline">
-                                  View all {section.categories.length} items
-                                </button>
-                              </li>
-                            )}
-                          </ul>
-                        </div>
+                        <AccordionItem key={index} value={`category-${index}`} className="border-none">
+                          <AccordionTrigger className="py-3 hover:no-underline hover:text-primary">
+                            <span className="font-semibold text-foreground">{section.title}</span>
+                          </AccordionTrigger>
+                          <AccordionContent>
+                            <ul className="space-y-2 pl-4">
+                              {section.categories.map((category, catIndex) => (
+                                <li key={catIndex}>
+                                  <a 
+                                    href={category.href} 
+                                    onClick={() => setIsOpen(false)} 
+                                    className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                                  >
+                                    {category.name}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </AccordionContent>
+                        </AccordionItem>
                       ))}
-                    </div>
+                    </Accordion>
                   </div>
                 </div>
 
