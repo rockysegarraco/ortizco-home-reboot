@@ -16,31 +16,21 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-16 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
+      <div className="relative z-10 container mx-auto px-4 py-16">
+        <div className="max-w-4xl">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Creating Experiences,{" "}
             <span className="block">Not Just Exhibits</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-2xl">
             We integrate cutting edge technology and innovative solutions to ensure your expo 
             or production runs seamlessly and leaves a lasting impact.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-gold-gradient hover:opacity-90 transition-opacity text-lg px-8 py-6 rounded-lg font-semibold">
-              Shop Our Collection
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-foreground/20 text-foreground hover:bg-foreground/10 text-lg px-8 py-6 rounded-lg font-semibold"
-            >
-              View Services
-            </Button>
-          </div>
+          <Button size="lg" className="bg-gold-gradient hover:opacity-90 transition-opacity text-lg px-8 py-6 rounded-full font-semibold">
+            Contact Us
+          </Button>
         </div>
       </div>
 
