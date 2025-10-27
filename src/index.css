@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 210 11% 15%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 45 93% 47%;
+    --primary: 47 100% 71%;
     --primary-foreground: 210 11% 15%;
 
     --secondary: 210 11% 21%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 11% 21%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 45 93% 47%;
+    --accent: 47 100% 71%;
     --accent-foreground: 210 11% 15%;
 
     --destructive: 0 84% 60%;
@@ -34,13 +34,13 @@ All colors MUST be HSL.
 
     --border: 210 11% 21%;
     --input: 210 11% 21%;
-    --ring: 45 93% 47%;
+    --ring: 47 100% 71%;
 
     --radius: 0.75rem;
     
     /* Custom design tokens */
     --hero-gradient: linear-gradient(135deg, hsl(210 11% 8%) 0%, hsl(210 11% 15%) 100%);
-    --gold-gradient: linear-gradient(135deg, hsl(45 93% 47%) 0%, hsl(45 93% 40%) 100%);
+    --gold-gradient: linear-gradient(135deg, hsl(47 100% 71%) 0%, hsl(47 100% 65%) 100%);
     --card-hover: 210 11% 18%;
     --glass-bg: 210 11% 15% / 0.8;
     --shadow-premium: 0 25px 50px -12px hsl(210 11% 8% / 0.5);
@@ -73,7 +73,7 @@ All colors MUST be HSL.
     --popover: 210 11% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 45 93% 47%;
+    --primary: 47 100% 71%;
     --primary-foreground: 210 11% 8%;
 
     --secondary: 210 11% 12%;
@@ -82,7 +82,7 @@ All colors MUST be HSL.
     --muted: 210 11% 12%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 45 93% 47%;
+    --accent: 47 100% 71%;
     --accent-foreground: 210 11% 8%;
 
     --destructive: 0 84% 60%;
@@ -90,7 +90,7 @@ All colors MUST be HSL.
 
     --border: 210 11% 12%;
     --input: 210 11% 12%;
-    --ring: 45 93% 47%;
+    --ring: 47 100% 71%;
     
     --hero-gradient: linear-gradient(135deg, hsl(210 11% 4%) 0%, hsl(210 11% 8%) 100%);
     --card-hover: 210 11% 10%;
