@@ -101,30 +101,6 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="bg-card/30 rounded-lg p-8 mb-12 border border-border/50">
-          <div className="text-center md:text-left md:flex md:items-center md:justify-between">
-            <div className="mb-6 md:mb-0">
-              <h3 className="text-2xl font-bold text-foreground mb-2">
-                Stay Updated
-              </h3>
-              <p className="text-muted-foreground">
-                Get the latest products, trends, and exclusive offers delivered to your inbox.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 md:max-w-md">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg border border-border bg-background/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <Button className="bg-gold-gradient hover:opacity-90 transition-opacity px-6 py-3 font-semibold">
-                Subscribe
-              </Button>
-            </div>
-          </div>
-        </div>
-
         <Separator className="mb-8" />
 
         {/* Bottom Footer */}
