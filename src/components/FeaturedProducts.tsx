@@ -64,6 +64,27 @@ const FeaturedProducts = () => {
       reviews: 12,
       category: "Furniture",
       featured: true
+    },
+    {
+      id: 7,
+      name: "Premium Drape Set",
+      price: "$340.00",
+      image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&h=400&fit=crop",
+      rating: 4.7,
+      reviews: 19,
+      category: "Drapes",
+      featured: false
+    },
+    {
+      id: 8,
+      name: "Audio Visual Package",
+      price: "$650.00",
+      originalPrice: "$750.00",
+      image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&h=400&fit=crop",
+      rating: 4.8,
+      reviews: 28,
+      category: "Audio Visual",
+      featured: true
     }
   ];
 
@@ -80,7 +101,7 @@ const FeaturedProducts = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {products.map((product) => (
             <Card 
               key={product.id} 
