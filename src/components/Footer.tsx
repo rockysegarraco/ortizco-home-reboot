@@ -1,129 +1,104 @@
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { Mail, Phone, MapPin, LinkedinIcon } from "lucide-react";
+import { LinkedinIcon } from "lucide-react";
 
 const Footer = () => {
-  const footerSections = [
-    {
-      title: "Shop Categories",
-      links: [
-        { name: "Exhibition Furniture", href: "#furniture" },
-        { name: "Lighting Solutions", href: "#lighting" },
-        { name: "Display Systems", href: "#displays" },
-        { name: "Flooring & Carpets", href: "#flooring" },
-        { name: "Technology", href: "#technology" }
-      ]
-    },
-    {
-      title: "Services",
-      links: [
-        { name: "Exhibition Design", href: "#design" },
-        { name: "Project Management", href: "#management" },
-        { name: "Logistics & Setup", href: "#logistics" },
-        { name: "Creative Services", href: "#creative" },
-        { name: "Technical Support", href: "#support" }
-      ]
-    },
-    {
-      title: "Company",
-      links: [
-        { name: "About Us", href: "#about" },
-        { name: "Our Process", href: "#process" },
-        { name: "Case Studies", href: "#cases" },
-        { name: "Careers", href: "#careers" },
-        { name: "News & Events", href: "#news" }
-      ]
-    },
-    {
-      title: "Support",
-      links: [
-        { name: "Contact Us", href: "#contact" },
-        { name: "Help Center", href: "#help" },
-        { name: "Shipping Info", href: "#shipping" },
-        { name: "Returns", href: "#returns" },
-        { name: "Privacy Policy", href: "#privacy" }
-      ]
-    }
-  ];
-
   return (
-    <footer className="bg-secondary/50 border-t border-border/50">
+    <footer className="bg-[#1a1a1a] text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <span className="text-3xl font-bold text-foreground">Ortiz&Co.</span>
-              <span className="rounded bg-primary px-2 py-1 text-xs font-bold text-primary-foreground">
-                SHOP
-              </span>
-            </div>
-            <p className="text-white mb-6 leading-relaxed">
-              Creating exceptional exhibition experiences through innovative design, 
-              premium products, and comprehensive services. Your success is our mission.
-            </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center text-sm">
-                <Phone className="h-4 w-4 mr-3 text-primary" />
-                <span className="text-muted-foreground">+1 (555) 123-4567</span>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          {/* LinkedIn Icon - Left Column */}
+          <div>
+            <a 
+              href="https://linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block hover:opacity-80 transition-opacity"
+            >
+              <LinkedinIcon className="h-6 w-6" />
+            </a>
+          </div>
+
+          {/* Explore Column */}
+          <div>
+            <h4 className="font-semibold mb-6 text-lg">Explore</h4>
+            <ul className="space-y-4">
+              <li>
+                <a href="#about" className="hover:opacity-80 transition-opacity flex items-center">
+                  <span className="mr-2">→</span> About
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:opacity-80 transition-opacity flex items-center">
+                  <span className="mr-2">→</span> Services & Solutions
+                </a>
+              </li>
+              <li>
+                <a href="#shows" className="hover:opacity-80 transition-opacity flex items-center">
+                  <span className="mr-2">→</span> Shows & Events
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:opacity-80 transition-opacity flex items-center">
+                  <span className="mr-2">→</span> Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Locations Column */}
+          <div>
+            <h4 className="font-semibold mb-6 text-lg">Locations</h4>
+            <div className="space-y-6">
+              <div>
+                <p>8810 Boggy Creek Rd.</p>
+                <p>Suite 100</p>
+                <p>Orlando, FL 32824</p>
               </div>
-              <div className="flex items-center text-sm">
-                <Mail className="h-4 w-4 mr-3 text-primary" />
-                <span className="text-muted-foreground">shop@ortizandco.com</span>
-              </div>
-              <div className="flex items-center text-sm">
-                <MapPin className="h-4 w-4 mr-3 text-primary" />
-                <span className="text-muted-foreground">Miami, FL</span>
+              <div>
+                <p>Europe – Coming Soon</p>
               </div>
             </div>
           </div>
 
-          {/* Footer Links */}
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h4 className="font-semibold text-foreground mb-4">{section.title}</h4>
-              <ul className="space-y-3">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a 
-                      href={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+          {/* Conversation Column */}
+          <div>
+            <h4 className="font-semibold mb-6 text-lg">Conversation</h4>
+            <div className="space-y-6">
+              <div>
+                <p className="font-semibold mb-1">Exhibitors & Events</p>
+                <a href="mailto:events@ortizandco.com" className="hover:opacity-80 transition-opacity">
+                  events@ortizandco.com
+                </a>
+              </div>
+              <div>
+                <p className="font-semibold mb-1">General Inquiries</p>
+                <a href="mailto:info@ortizandco.com" className="hover:opacity-80 transition-opacity">
+                  info@ortizandco.com
+                </a>
+              </div>
+              <div>
+                <a href="tel:407-784-2166" className="hover:opacity-80 transition-opacity">
+                  407-784-2166
+                </a>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
 
-        <Separator className="mb-8" />
-
         {/* Bottom Footer */}
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <div className="text-sm text-muted-foreground">
-            © 2024 Ortiz&Co. All rights reserved. Creating experiences, not just exhibits.
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10">
+          <div className="text-sm mb-4 md:mb-0">
+            © 2025 Ortiz&Co. All rights reserved
           </div>
           
-          <div className="flex items-center space-x-6">
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
-              <LinkedinIcon className="h-5 w-5" />
-              <span className="sr-only">LinkedIn</span>
-            </Button>
-            <div className="flex items-center space-x-4 text-sm">
-              <a href="#terms" className="text-muted-foreground hover:text-primary transition-colors">
-                Terms of Service
-              </a>
-              <span className="text-border">•</span>
-              <a href="#privacy" className="text-muted-foreground hover:text-primary transition-colors">
-                Privacy Policy
-              </a>
-            </div>
-          </div>
+          <a 
+            href="https://linkedin.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block hover:opacity-80 transition-opacity"
+          >
+            <LinkedinIcon className="h-5 w-5" />
+          </a>
         </div>
       </div>
     </footer>
