@@ -241,22 +241,8 @@ const Header = () => {
 
                 {/* Navigation Content */}
                 <div className="flex-1 overflow-y-auto px-6 py-6">
-                  {/* Main Navigation */}
-                  <nav className="space-y-1 mb-6">
-                    {navigation.map(item => (
-                      <a 
-                        key={item.name} 
-                        href={item.href} 
-                        onClick={() => setIsOpen(false)} 
-                        className="block py-3 text-base font-medium text-foreground hover:text-primary transition-colors"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </nav>
-
                   {/* Shop Categories */}
-                  <div className="border-t border-border pt-6">
+                  <div className="mb-6">
                     <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
                       Shop by Category
                     </h3>
@@ -285,6 +271,20 @@ const Header = () => {
                       ))}
                     </Accordion>
                   </div>
+
+                  {/* Main Navigation */}
+                  <nav className="border-t border-border pt-6 space-y-1">
+                    {navigation.map(item => (
+                      <a 
+                        key={item.name} 
+                        href={item.href} 
+                        onClick={() => setIsOpen(false)} 
+                        className="block py-3 text-base font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </nav>
                 </div>
 
                 {/* Footer Actions */}
