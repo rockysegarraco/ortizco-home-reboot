@@ -226,52 +226,101 @@ const Header = () => {
                 <span className="sr-only">Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80 overflow-y-auto">
+            <SheetContent side="right" className="w-80 p-0">
               <div className="flex flex-col h-full">
-                <div className="flex-1 space-y-4 mt-8 overflow-y-auto">
-                {navigation.map(item => <a key={item.name} href={item.href} onClick={() => setIsOpen(false)} className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors">
-                    {item.name}
-                  </a>)}
-                
-                {/* Mobile Shop Categories */}
-                <div className="border-t border-border pt-4 mt-6">
-                  <h3 className="text-lg font-semibold text-primary mb-4">Shop Categories</h3>
-                  <div className="space-y-4">
-                    {Object.values(megaMenuData).map((section, index) => <div key={index}>
-                        <h4 className="font-medium text-foreground mb-2">{section.title}</h4>
-                        <ul className="space-y-2 ml-4">
-                          {section.categories.slice(0, 3).map((category, catIndex) => <li key={catIndex}>
-                              <a href={category.href} onClick={() => setIsOpen(false)} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                                {category.name}
-                              </a>
-                            </li>)}
-                          {section.categories.length > 3 && <li>
-                              <span className="text-xs text-muted-foreground">
-                                +{section.categories.length - 3} more
-                              </span>
-                            </li>}
-                        </ul>
-                      </div>)}
+                {/* Header */}
+                <div className="px-6 py-4 border-b border-border">
+                  <div className="flex items-center space-x-2">
+                    <img src={oacLogo} alt="Ortiz&Co." className="h-5" />
+                    <span className="rounded bg-primary px-2 py-0.5 text-xs font-bold text-primary-foreground">
+                      SHOP
+                    </span>
                   </div>
-                 </div>
-                 
-                 <div className="flex items-center space-x-4 pt-4">
-                  <Button variant="ghost" size="sm">
-                    <Search className="h-4 w-4 mr-2" />
+                </div>
+
+                {/* Navigation Content */}
+                <div className="flex-1 overflow-y-auto px-6 py-6">
+                  {/* Main Navigation */}
+                  <nav className="space-y-1 mb-6">
+                    {navigation.map(item => (
+                      <a 
+                        key={item.name} 
+                        href={item.href} 
+                        onClick={() => setIsOpen(false)} 
+                        className="block py-3 text-base font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </nav>
+
+                  {/* Shop Categories */}
+                  <div className="border-t border-border pt-6">
+                    <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
+                      Shop by Category
+                    </h3>
+                    <div className="space-y-6">
+                      {Object.values(megaMenuData).map((section, index) => (
+                        <div key={index}>
+                          <h4 className="font-semibold text-foreground mb-3">{section.title}</h4>
+                          <ul className="space-y-2">
+                            {section.categories.slice(0, 4).map((category, catIndex) => (
+                              <li key={catIndex}>
+                                <a 
+                                  href={category.href} 
+                                  onClick={() => setIsOpen(false)} 
+                                  className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                                >
+                                  {category.name}
+                                </a>
+                              </li>
+                            ))}
+                            {section.categories.length > 4 && (
+                              <li>
+                                <button className="text-xs text-primary hover:underline">
+                                  View all {section.categories.length} items
+                                </button>
+                              </li>
+                            )}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Footer Actions */}
+                <div className="border-t border-border px-6 py-4 space-y-2">
+                  <Button 
+                    variant="ghost" 
+                    className="w-full justify-start" 
+                    size="lg"
+                  >
+                    <Search className="h-4 w-4 mr-3" />
                     Search
                   </Button>
-                  <Button variant="ghost" size="sm">
-                    <User className="h-4 w-4 mr-2" />
+                  <Button 
+                    variant="ghost" 
+                    className="w-full justify-start" 
+                    size="lg"
+                  >
+                    <User className="h-4 w-4 mr-3" />
                     Account
                   </Button>
-                  <Button variant="ghost" size="sm">
-                    <ShoppingCart className="h-4 w-4 mr-2" />
-                    Cart (0)
+                  <Button 
+                    variant="ghost" 
+                    className="w-full justify-start relative" 
+                    size="lg"
+                  >
+                    <ShoppingCart className="h-4 w-4 mr-3" />
+                    Cart
+                    <span className="ml-auto text-xs bg-primary text-primary-foreground rounded-full h-5 w-5 flex items-center justify-center">
+                      0
+                    </span>
                   </Button>
-                 </div>
-                 </div>
-               </div>
-             </SheetContent>
+                </div>
+              </div>
+            </SheetContent>
           </Sheet>
         </div>
       </div>
