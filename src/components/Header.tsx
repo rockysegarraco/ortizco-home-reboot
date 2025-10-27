@@ -150,7 +150,7 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             {/* Shop Mega Menu */}
             <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <button className="flex items-center text-sm font-medium text-white transition-colors hover:text-white/80">
+              <button className="flex items-center text-sm font-medium text-white transition-colors hover:text-[#ffdf6c]">
                 Shop
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" style={{
                 transform: showMegaMenu ? 'rotate(180deg)' : 'rotate(0deg)'
@@ -168,7 +168,7 @@ const Header = () => {
                             </h3>
                             <ul className="space-y-3">
                               {section.categories.map((category, catIndex) => <li key={catIndex}>
-                                  <a href={category.href} className="text-sm text-white hover:text-white/80 transition-colors duration-200 block py-1">
+                                  <a href={category.href} className="text-sm text-white hover:text-[#ffdf6c] transition-colors duration-200 block py-1">
                                     {category.name}
                                   </a>
                                 </li>)}
@@ -195,7 +195,7 @@ const Header = () => {
                 </div>}
             </div>
             
-            {navigation.map(item => <a key={item.name} href={item.href} className="text-sm font-medium text-white hover:text-white/80 transition-colors">
+            {navigation.map(item => <a key={item.name} href={item.href} className="text-sm font-medium text-white hover:text-[#ffdf6c] transition-colors">
                 {item.name}
               </a>)}
           </nav>
@@ -249,7 +249,7 @@ const Header = () => {
                     <Accordion type="multiple" className="space-y-2">
                       {Object.values(megaMenuData).map((section, index) => (
                         <AccordionItem key={index} value={`category-${index}`} className="border-none">
-                          <AccordionTrigger className="py-3 hover:no-underline hover:text-white/80">
+                          <AccordionTrigger className="py-3 hover:no-underline hover:text-[#ffdf6c]">
                             <span className="font-semibold text-white">{section.title}</span>
                           </AccordionTrigger>
                           <AccordionContent>
@@ -259,7 +259,7 @@ const Header = () => {
                                   <a 
                                     href={category.href} 
                                     onClick={() => setIsOpen(false)} 
-                                    className="block py-1 text-sm text-white hover:text-white/80 transition-colors"
+                                    className="block py-1 text-sm text-white hover:text-[#ffdf6c] transition-colors"
                                   >
                                     {category.name}
                                   </a>
@@ -279,7 +279,7 @@ const Header = () => {
                         key={item.name} 
                         href={item.href} 
                         onClick={() => setIsOpen(false)} 
-                        className="block py-3 text-base font-medium text-white hover:text-white/80 transition-colors"
+                        className="block py-3 text-base font-medium text-white hover:text-[#ffdf6c] transition-colors"
                       >
                         {item.name}
                       </a>
