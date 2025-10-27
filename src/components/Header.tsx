@@ -150,7 +150,7 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             {/* Shop Mega Menu */}
             <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <button className="flex items-center text-sm font-medium text-primary transition-colors hover:text-primary/80">
+              <button className="flex items-center text-sm font-medium text-white transition-colors hover:text-white/80">
                 Shop
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" style={{
                 transform: showMegaMenu ? 'rotate(180deg)' : 'rotate(0deg)'
@@ -163,12 +163,12 @@ const Header = () => {
                     <div className="container mx-auto px-6 py-8">
                       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {Object.values(megaMenuData).map((section, index) => <div key={index} className="space-y-4">
-                            <h3 className="font-semibold text-lg text-foreground border-b border-border pb-2">
+                            <h3 className="font-semibold text-lg text-white border-b border-border pb-2">
                               {section.title}
                             </h3>
                             <ul className="space-y-3">
                               {section.categories.map((category, catIndex) => <li key={catIndex}>
-                                  <a href={category.href} className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 block py-1">
+                                  <a href={category.href} className="text-sm text-white hover:text-white/80 transition-colors duration-200 block py-1">
                                     {category.name}
                                   </a>
                                 </li>)}
@@ -180,7 +180,7 @@ const Header = () => {
                       <div className="mt-8 pt-6 border-t border-border">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                           <div>
-                            <h4 className="font-semibold text-foreground mb-2">Need Help Choosing?</h4>
+                            <h4 className="font-semibold text-white mb-2">Need Help Choosing?</h4>
                             <p className="text-sm text-white">
                               Our exhibition experts can help you select the perfect items for your booth.
                             </p>
@@ -195,7 +195,7 @@ const Header = () => {
                 </div>}
             </div>
             
-            {navigation.map(item => <a key={item.name} href={item.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            {navigation.map(item => <a key={item.name} href={item.href} className="text-sm font-medium text-white hover:text-white/80 transition-colors">
                 {item.name}
               </a>)}
           </nav>
@@ -243,14 +243,14 @@ const Header = () => {
                 <div className="flex-1 overflow-y-auto px-6 py-6">
                   {/* Shop Categories */}
                   <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
+                    <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
                       Shop by Category
                     </h3>
                     <Accordion type="multiple" className="space-y-2">
                       {Object.values(megaMenuData).map((section, index) => (
                         <AccordionItem key={index} value={`category-${index}`} className="border-none">
-                          <AccordionTrigger className="py-3 hover:no-underline hover:text-primary">
-                            <span className="font-semibold text-foreground">{section.title}</span>
+                          <AccordionTrigger className="py-3 hover:no-underline hover:text-white/80">
+                            <span className="font-semibold text-white">{section.title}</span>
                           </AccordionTrigger>
                           <AccordionContent>
                             <ul className="space-y-2 pl-4">
@@ -259,7 +259,7 @@ const Header = () => {
                                   <a 
                                     href={category.href} 
                                     onClick={() => setIsOpen(false)} 
-                                    className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                                    className="block py-1 text-sm text-white hover:text-white/80 transition-colors"
                                   >
                                     {category.name}
                                   </a>
@@ -279,7 +279,7 @@ const Header = () => {
                         key={item.name} 
                         href={item.href} 
                         onClick={() => setIsOpen(false)} 
-                        className="block py-3 text-base font-medium text-foreground hover:text-primary transition-colors"
+                        className="block py-3 text-base font-medium text-white hover:text-white/80 transition-colors"
                       >
                         {item.name}
                       </a>
