@@ -29,9 +29,6 @@ const Header = () => {
     name: "Shows & Events",
     href: "#events"
   }, {
-    name: "News",
-    href: "#news"
-  }, {
     name: "Contact",
     href: "#contact"
   }];
