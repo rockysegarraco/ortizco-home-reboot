@@ -7,18 +7,21 @@ const CategoryShowcase = () => {
     title: "Custom Furniture",
     image: customFurnitureImage,
     link: "Shop",
+    url: "https://shop.ortizandco.com/custom-furniture",
     alt: "Modern event space with custom furniture and vibrant carpet design"
   }, {
     id: 2,
     title: "Labor Services",
     image: laborServicesImage,
     link: "Shop",
+    url: "https://shop.ortizandco.com/labor",
     alt: "Professional labor services for events and exhibitions"
   }, {
     id: 3,
     title: "Audio Visual",
     image: technologyImage,
     link: "Shop",
+    url: "https://shop.ortizandco.com/audio-visual",
     alt: "Professional event technology and AV equipment"
   }];
   return <section className="py-16 bg-background">
@@ -31,7 +34,7 @@ const CategoryShowcase = () => {
               <h3 className="text-xl font-semibold text-foreground mb-2">
                 {category.title}
               </h3>
-              <a href="#" className="inline-block text-foreground underline underline-offset-4 hover:text-foreground/80 transition-colors">
+              <a href={category.url} className="inline-block text-foreground underline underline-offset-4 hover:text-foreground/80 transition-colors">
                 {category.link}
               </a>
             </div>)}
