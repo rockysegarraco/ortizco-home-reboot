@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import boothRentalsImage from "@/assets/booth-rentals.png";
 const DataEnrichmentSection = () => {
   return <section className="py-20 bg-background">
-      <div className="container max-w-7xl mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
