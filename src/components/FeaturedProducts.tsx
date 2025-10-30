@@ -44,7 +44,7 @@ const FeaturedProducts = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
           {products.map(product => <Card key={product.id} className="group cursor-pointer border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-premium bg-card/50 backdrop-blur-sm">
               <CardContent className="p-4">
                  <div className="relative mb-3 overflow-hidden rounded-lg">
