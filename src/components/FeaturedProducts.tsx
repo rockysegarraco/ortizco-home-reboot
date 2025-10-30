@@ -8,28 +8,23 @@ import carpetPadding from "@/assets/carpet-padding.png";
 const FeaturedProducts = () => {
   const products = [{
     id: 1,
-    name: "Booth Carpet",
-    price: "$280",
+    name: "Booth Carpet & Padding",
     image: carpetSamples
   }, {
     id: 2,
     name: "Gray Padded Side Chair",
-    price: "$105",
     image: chair
   }, {
     id: 3,
     name: "Flatscreen Monitor",
-    price: "$300",
     image: monitor
   }, {
     id: 4,
     name: "Table Drape",
-    price: "$165.00",
     image: tableDrape
   }, {
     id: 5,
-    name: "Carpet Padding",
-    price: "$175",
+    name: "Porter Services",
     image: carpetPadding
   }];
   return <section className="py-24 bg-secondary/30">
@@ -54,7 +49,6 @@ const FeaturedProducts = () => {
                    <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
                      {product.name}
                    </h3>
-                   <span className="text-2xl font-bold text-primary block">{product.price}</span>
                 </div>
               </CardContent>
             </Card>)}
