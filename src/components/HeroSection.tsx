@@ -21,9 +21,7 @@ const HeroSection = () => {
             or production runs seamlessly and leaves a lasting impact.
           </p>
 
-          <Button size="lg" className="bg-gold-gradient hover:opacity-90 transition-opacity text-lg px-8 py-6 rounded-full font-semibold">
-            Contact Us
-          </Button>
+          <Button size="lg" className="bg-gold-gradient hover:opacity-90 transition-opacity text-lg px-8 py-6 rounded-full font-semibold">Shop</Button>
         </div>
       </div>
 
