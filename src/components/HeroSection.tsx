@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-12 py-16">
         <div className="max-w-full">
           <h1 className="text-4xl text-white mb-6 leading-tight font-semibold md:text-8xl">
-            Designing Tomorrow's Events, Today
+            Decorate Your Dream Space With Our Finest Collection
           </h1>
           
           <p className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-2xl">
