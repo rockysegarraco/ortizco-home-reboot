@@ -1,5 +1,5 @@
 import boothDesignImage from "@/assets/category-booth-design.jpg";
-import furnitureRentalsImage from "@/assets/category-furniture-rentals.jpg";
+import laborServicesImage from "@/assets/labor-services.jpg";
 import technologyImage from "@/assets/category-technology.jpg";
 const CategoryShowcase = () => {
   const categories = [{
@@ -11,9 +11,9 @@ const CategoryShowcase = () => {
   }, {
     id: 2,
     title: "Labor Services",
-    image: furnitureRentalsImage,
+    image: laborServicesImage,
     link: "Shop",
-    alt: "Elegant event furniture rental showcase"
+    alt: "Professional labor services for events and exhibitions"
   }, {
     id: 3,
     title: "Audio Visual",
