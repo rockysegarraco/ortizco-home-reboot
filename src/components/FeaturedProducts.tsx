@@ -12,7 +12,7 @@ const FeaturedProducts = () => {
     image: carpetSamples
   }, {
     id: 2,
-    name: "Gray Padded Side Chair",
+    name: "Custom Chairs",
     image: chair
   }, {
     id: 3,
