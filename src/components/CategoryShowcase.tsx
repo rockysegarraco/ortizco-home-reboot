@@ -1,13 +1,13 @@
-import boothDesignImage from "@/assets/category-booth-design.jpg";
+import customFurnitureImage from "@/assets/custom-furniture.jpg";
 import laborServicesImage from "@/assets/labor-services.jpg";
 import technologyImage from "@/assets/category-technology.jpg";
 const CategoryShowcase = () => {
   const categories = [{
     id: 1,
     title: "Custom Furniture",
-    image: boothDesignImage,
+    image: customFurnitureImage,
     link: "Shop",
-    alt: "Professional exhibition booth setup with modern furniture"
+    alt: "Modern event space with custom furniture and vibrant carpet design"
   }, {
     id: 2,
     title: "Labor Services",
