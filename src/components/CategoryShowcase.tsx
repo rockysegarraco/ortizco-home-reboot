@@ -4,21 +4,21 @@ import technologyImage from "@/assets/category-technology.jpg";
 const CategoryShowcase = () => {
   const categories = [{
     id: 1,
-    title: "Custom Booth Design",
+    title: "Custom Furniture",
     image: boothDesignImage,
-    link: "Shop Booth Solutions",
+    link: "Shop",
     alt: "Professional exhibition booth setup with modern furniture"
   }, {
     id: 2,
-    title: "Premium Furniture Rentals",
+    title: "Labor Services",
     image: furnitureRentalsImage,
-    link: "Shop Furniture",
+    link: "Shop",
     alt: "Elegant event furniture rental showcase"
   }, {
     id: 3,
-    title: "Event Technology & AV",
+    title: "Audio Visual",
     image: technologyImage,
-    link: "Shop Technology",
+    link: "Shop",
     alt: "Professional event technology and AV equipment"
   }];
   return <section className="py-16 bg-background">
