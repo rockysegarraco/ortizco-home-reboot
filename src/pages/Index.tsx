@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import CategoryShowcase from "@/components/CategoryShowcase";
-import LogoCarousel from "@/components/LogoCarousel";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import DataEnrichmentSection from "@/components/DataEnrichmentSection";
 import CTASection from "@/components/CTASection";
@@ -16,7 +15,6 @@ const Index = () => {
       <FeaturedProducts />
       <DataEnrichmentSection />
       <CTASection />
-      <LogoCarousel />
       <Footer />
     </div>
   );
