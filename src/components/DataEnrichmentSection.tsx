@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import boothRentalsImage from "@/assets/booth-rentals.png";
+import boothRentalsImage from "@/assets/booth-rentals.jpg";
 const DataEnrichmentSection = () => {
   return <section className="py-20 bg-background">
       <div className="container max-w-6xl mx-auto px-4">
