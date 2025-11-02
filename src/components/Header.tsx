@@ -2,7 +2,8 @@ import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Menu, Search, ShoppingCart, User, ChevronDown } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Menu, Search, ShoppingCart, User, ChevronDown, LogIn, UserPlus, Lock, UserCircle, Book, Heart } from "lucide-react";
 import oacLogo from "@/assets/oac-logo-horizontal-white.svg";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -203,10 +204,43 @@ const Header = () => {
               <Search className="h-4 w-4" />
               <span className="sr-only">Search</span>
             </Button>
-            <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
-              <User className="h-4 w-4" />
-              <span className="sr-only">Account</span>
-            </Button>
+            
+            {/* User Account Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
+                  <User className="h-4 w-4" />
+                  <span className="sr-only">Account</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
+                <DropdownMenuItem>
+                  <LogIn className="mr-2 h-4 w-4" />
+                  <span>Login</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <UserPlus className="mr-2 h-4 w-4" />
+                  <span>Register</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Lock className="mr-2 h-4 w-4" />
+                  <span>Forgotten Password</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <UserCircle className="mr-2 h-4 w-4" />
+                  <span>My Account</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Book className="mr-2 h-4 w-4" />
+                  <span>Address Book</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Heart className="mr-2 h-4 w-4" />
+                  <span>Wish List</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             <Button variant="ghost" size="sm" className="h-9 w-9 p-0 relative">
               <ShoppingCart className="h-4 w-4" />
               <span className="sr-only">Cart</span>
