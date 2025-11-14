@@ -198,8 +198,8 @@ const Header = () => {
               </a>)}
           </nav>
 
-          {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* Actions - Visible on all screen sizes */}
+          <div className="flex items-center space-x-2">
             <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
               <Search className="h-4 w-4" />
               <span className="sr-only">Search</span>
@@ -248,11 +248,10 @@ const Header = () => {
                 0
               </span>
             </Button>
-          </div>
 
-          {/* Mobile Menu */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="lg:hidden">
+            {/* Mobile Menu Trigger */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Menu</span>
@@ -318,39 +317,10 @@ const Header = () => {
                   </nav>
                 </div>
 
-                {/* Footer Actions */}
-                <div className="border-t border-border px-6 py-4 space-y-2">
-                  <Button 
-                    variant="ghost" 
-                    className="w-full justify-start" 
-                    size="lg"
-                  >
-                    <Search className="h-4 w-4 mr-3" />
-                    Search
-                  </Button>
-                  <Button 
-                    variant="ghost" 
-                    className="w-full justify-start" 
-                    size="lg"
-                  >
-                    <User className="h-4 w-4 mr-3" />
-                    Account
-                  </Button>
-                  <Button 
-                    variant="ghost" 
-                    className="w-full justify-start relative" 
-                    size="lg"
-                  >
-                    <ShoppingCart className="h-4 w-4 mr-3" />
-                    Cart
-                    <span className="ml-auto text-xs bg-primary text-primary-foreground rounded-full h-5 w-5 flex items-center justify-center">
-                      0
-                    </span>
-                  </Button>
-                </div>
               </div>
             </SheetContent>
-          </Sheet>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>;
