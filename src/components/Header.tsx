@@ -135,10 +135,10 @@ const Header = () => {
   return <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <img src={oacLogo} alt="Ortiz&Co." className="h-6" />
-              <span className="rounded bg-primary px-2 py-1 text-xs font-bold text-primary-foreground">
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            <div className="flex items-center space-x-1.5 sm:space-x-2">
+              <img src={oacLogo} alt="Ortiz&Co." className="h-4 sm:h-6" />
+              <span className="rounded bg-primary px-1.5 py-0.5 sm:px-2 sm:py-1 text-[10px] sm:text-xs font-bold text-primary-foreground">
                 SHOP
               </span>
             </div>
