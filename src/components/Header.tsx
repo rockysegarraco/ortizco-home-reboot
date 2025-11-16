@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -8,17 +8,9 @@ import oacLogo from "@/assets/oac-logo-horizontal-white.svg";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const handleMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    setShowMegaMenu(true);
-  };
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setShowMegaMenu(false);
-    }, 150);
+  
+  const handleShopClick = () => {
+    setShowMegaMenu(!showMegaMenu);
   };
   const navigation = [{
     name: "About Us",
@@ -147,8 +139,11 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {/* Shop Mega Menu */}
-            <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <button className="flex items-center text-sm font-medium text-white transition-colors hover:text-[#ffdf6c]">
+            <div className="relative">
+              <button 
+                onClick={handleShopClick}
+                className="flex items-center text-sm font-medium text-white transition-colors hover:text-[#ffdf6c]"
+              >
                 Shop
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200" style={{
                 transform: showMegaMenu ? 'rotate(180deg)' : 'rotate(0deg)'
@@ -156,7 +151,7 @@ const Header = () => {
               </button>
               
               {/* Mega Menu Dropdown */}
-              {showMegaMenu && <div className="fixed inset-x-0 top-16 z-50" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              {showMegaMenu && <div className="fixed inset-x-0 top-16 z-50">
                   <div className="w-screen bg-card/95 backdrop-blur-md border-t border-border shadow-premium">
                     <div className="container mx-auto px-6 py-8">
                       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
